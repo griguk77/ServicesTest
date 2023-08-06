@@ -7,7 +7,7 @@ import android.os.IBinder
 import android.util.Log
 import kotlinx.coroutines.*
 
-class MyService: Service() {
+class MyService : Service() {
 
     private val coroutineScope = CoroutineScope(Dispatchers.Main)
 
