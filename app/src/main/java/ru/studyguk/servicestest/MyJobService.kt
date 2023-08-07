@@ -15,7 +15,7 @@ class MyJobService : JobService() {
     }
 
     override fun onStartJob(params: JobParameters?): Boolean {
-        log("onStartCommand")
+        log("onStartJob")
         coroutineScope.launch {
             for (i in 0 until 100) {
                 delay(1000)
@@ -38,6 +38,10 @@ class MyJobService : JobService() {
     }
 
     private fun log(message: String) {
-        Log.d("RRR", "MyService $message")
+        Log.d("RRR", "MyJobService $message")
+    }
+
+    companion object {
+        const val JOB_ID = 111
     }
 }
